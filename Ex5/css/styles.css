@@ -1,4 +1,4 @@
-
+/* Apply a stylish background */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -8,7 +8,7 @@ body {
   color: white;
 }
 
-
+/* Style the header */
 header {
   background: rgba(0, 0, 0, 0.8);
   padding: 20px;
@@ -34,13 +34,13 @@ nav a:hover {
   border-radius: 5px;
 }
 
-
+/* Adjust the page layout */
 section {
   margin-top: 100px; /* Push content below fixed header */
   padding: 20px;
 }
 
-
+/* Improve form styling */
 form {
   background: rgba(255, 255, 255, 0.1);
   padding: 20px;
@@ -72,7 +72,7 @@ button:hover {
   background: #ff9900;
 }
 
-
+/* Footer styling */
 footer {
   margin-top: 30px;
   padding: 20px;
