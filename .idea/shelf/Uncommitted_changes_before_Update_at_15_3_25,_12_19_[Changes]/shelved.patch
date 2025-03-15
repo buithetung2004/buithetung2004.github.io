@@ -1,0 +1,382 @@
+Index: index.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Home - My Personal Website</title>\n  <link rel=\"stylesheet\" href=\"css/styles.css\">\n</head>\n<body>\n<header>\n  <h1>Welcome to My Website</h1>\n  <nav>\n    <a href=\"index.html\">Home</a>\n    <a href=\"About.html\">About</a>\n    <a href=\"Portfolio.html\">Portfolio</a>\n    <a href=\"Services.html\">Services</a>\n    <a href=\"Contact.html\">Contact</a>\n  </nav>\n</header>\n\n<section>\n  <h2>Introduction</h2>\n  <p>This is my personal website where you can learn more about me, my projects, and how to get in touch.</p>\n  <img src=\"image/CV.jpg\" alt=\"Profile Image\" width=\"300\">\n</section>\n\n<iframe src=\"About.html\" width=\"100%\" height=\"300\"></iframe>\n\n<footer>\n  <p>&copy; 2025 My Website</p>\n</footer>\n</body>\n</html>\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/index.html b/index.html
+--- a/index.html	(revision 00306724e97a5a62a69e25240e35a41c7718bdad)
++++ b/index.html	(date 1742015865624)
+@@ -10,7 +10,7 @@
+ <header>
+   <h1>Welcome to My Website</h1>
+   <nav>
+-    <a href="index.html">Home</a>
++    <a href="Ex5.html">Home</a>
+     <a href="About.html">About</a>
+     <a href="Portfolio.html">Portfolio</a>
+     <a href="Services.html">Services</a>
+Index: webpack.config.dev.js
+===================================================================
+diff --git a/webpack.config.dev.js b/webpack.config.dev.js
+deleted file mode 100644
+--- a/webpack.config.dev.js	(revision 00306724e97a5a62a69e25240e35a41c7718bdad)
++++ /dev/null	(revision 00306724e97a5a62a69e25240e35a41c7718bdad)
+@@ -1,13 +0,0 @@
+-const { merge } = require('webpack-merge');
+-const common = require('./webpack.common.js');
+-
+-module.exports = merge(common, {
+-  mode: 'development',
+-  devtool: 'inline-source-map',
+-  devServer: {
+-    liveReload: true,
+-    hot: true,
+-    open: true,
+-    static: ['./'],
+-  },
+-});
+Index: webpack.common.js
+===================================================================
+diff --git a/webpack.common.js b/webpack.common.js
+deleted file mode 100644
+--- a/webpack.common.js	(revision 00306724e97a5a62a69e25240e35a41c7718bdad)
++++ /dev/null	(revision 00306724e97a5a62a69e25240e35a41c7718bdad)
+@@ -1,12 +0,0 @@
+-const path = require('path');
+-
+-module.exports = {
+-  entry: {
+-    app: './js/app.js',
+-  },
+-  output: {
+-    path: path.resolve(__dirname, 'dist'),
+-    clean: true,
+-    filename: './js/app.js',
+-  },
+-};
+Index: Portfolio.html
+===================================================================
+diff --git a/Portfolio.html b/Portfolio.html
+deleted file mode 100644
+--- a/Portfolio.html	(revision 00306724e97a5a62a69e25240e35a41c7718bdad)
++++ /dev/null	(revision 00306724e97a5a62a69e25240e35a41c7718bdad)
+@@ -1,53 +0,0 @@
+-<!DOCTYPE html>
+-<html lang="en">
+-<head>
+-  <meta charset="UTF-8">
+-  <title>Portfolio</title>
+-  <link rel="stylesheet" href="css/styles.css">
+-</head>
+-<body>
+-<div class="container">
+-  <section>
+-    <h2>Experience</h2>
+-    <article>
+-      <p><strong>IBM Tech, HCM City - Frontend Developer Intern</strong><br>
+-        June 2024 - September 2025</p>
+-      <ul>
+-        <li>Developed and maintained **responsive web pages** using HTML, CSS, and JavaScript.</li>
+-        <li>Improved **website performance** by optimizing images and reducing load time by 30%.</li>
+-        <li>Designed **interactive UI components** using CSS animations and JavaScript events.</li>
+-        <li>Collaborated with backend developers to integrate REST APIs for dynamic content.</li>
+-        <li>Created **technical documentation** for the frontend development process.</li>
+-      </ul>
+-    </article>
+-
+-    <article>
+-      <p><strong>IBM Startup, Remote - Freelance Web Developer</strong><br>
+-        October 2025 - Present</p>
+-      <ul>
+-        <li>Developed **landing pages and business websites** for multiple clients.</li>
+-        <li>Implemented **SEO strategies**, increasing organic traffic by 50%.</li>
+-        <li>Designed mobile-friendly, **responsive layouts** using CSS Grid and Flexbox.</li>
+-        <li>Integrated **Google Analytics** for tracking user engagement.</li>
+-        <li>Provided website maintenance and troubleshooting support.</li>
+-      </ul>
+-    </article>
+-  </section>
+-
+-  <section>
+-    <h2>Achievements & Projects</h2>
+-    <ul>
+-      <li>Won **2nd place** in the International University Hackathon 2024.</li>
+-      <li>Developed a **portfolio website** showcasing projects and blog posts.</li>
+-      <li>Contributed to an **open-source accessibility project**, improving usability for visually impaired users.</li>
+-      <li>Published **technical articles** on frontend best practices, read by over 10,000 developers.</li>
+-    </ul>
+-  </section>
+-
+-  <footer>
+-    <h2>Links</h2>
+-    <p>LinkedIn: <a href="#">LinkedIn</a> | GitHub: <a href="#">GitHub</a></p>
+-  </footer>
+-</div>
+-</body>
+-</html>
+Index: Services.html
+===================================================================
+diff --git a/Services.html b/Services.html
+deleted file mode 100644
+--- a/Services.html	(revision 00306724e97a5a62a69e25240e35a41c7718bdad)
++++ /dev/null	(revision 00306724e97a5a62a69e25240e35a41c7718bdad)
+@@ -1,12 +0,0 @@
+-<!DOCTYPE html>
+-<html lang="en">
+-<head>
+-  <meta charset="UTF-8">
+-  <title>Services</title>
+-  <link rel="stylesheet" href="css/styles.css">
+-</head>
+-<body>
+-<h1>My Services</h1>
+-<p>Web Development, SEO Optimization, and Graphic Design.</p>
+-</body>
+-</html>
+Index: styles.css
+===================================================================
+diff --git a/styles.css b/styles.css
+deleted file mode 100644
+--- a/styles.css	(revision 00306724e97a5a62a69e25240e35a41c7718bdad)
++++ /dev/null	(revision 00306724e97a5a62a69e25240e35a41c7718bdad)
+@@ -1,83 +0,0 @@
+-
+-body {
+-  font-family: Arial, sans-serif;
+-  margin: 0;
+-  padding: 0;
+-  text-align: center;
+-  background: linear-gradient(to right, #6a11cb, #2575fc); /* Gradient background */
+-  color: white;
+-}
+-
+-
+-header {
+-  background: rgba(0, 0, 0, 0.8);
+-  padding: 20px;
+-  position: fixed;
+-  width: 100%;
+-  top: 0;
+-  left: 0;
+-}
+-
+-nav a {
+-  margin: 15px;
+-  color: white;
+-  text-decoration: none;
+-  font-weight: bold;
+-  font-size: 18px;
+-  padding: 10px;
+-  transition: 0.3s;
+-}
+-
+-nav a:hover {
+-  color: #ffcc00;
+-  background: rgba(255, 255, 255, 0.2);
+-  border-radius: 5px;
+-}
+-
+-
+-section {
+-  margin-top: 100px; /* Push content below fixed header */
+-  padding: 20px;
+-}
+-
+-
+-form {
+-  background: rgba(255, 255, 255, 0.1);
+-  padding: 20px;
+-  border-radius: 10px;
+-  width: 50%;
+-  margin: auto;
+-  backdrop-filter: blur(10px);
+-}
+-
+-input, textarea {
+-  width: 90%;
+-  padding: 10px;
+-  margin: 10px 0;
+-  border: none;
+-  border-radius: 5px;
+-}
+-
+-button {
+-  background: #ffcc00;
+-  color: black;
+-  padding: 10px 20px;
+-  border: none;
+-  border-radius: 5px;
+-  cursor: pointer;
+-  font-size: 16px;
+-}
+-
+-button:hover {
+-  background: #ff9900;
+-}
+-
+-
+-footer {
+-  margin-top: 30px;
+-  padding: 20px;
+-  background: rgba(0, 0, 0, 0.8);
+-}
+-body {
+-  background: linear-gradient(to right, #6a11cb, #2575fc) !important;
+-}
+Index: webpack.config.prod.js
+===================================================================
+diff --git a/webpack.config.prod.js b/webpack.config.prod.js
+deleted file mode 100644
+--- a/webpack.config.prod.js	(revision 00306724e97a5a62a69e25240e35a41c7718bdad)
++++ /dev/null	(revision 00306724e97a5a62a69e25240e35a41c7718bdad)
+@@ -1,26 +0,0 @@
+-const { merge } = require('webpack-merge');
+-const common = require('./webpack.common.js');
+-const HtmlWebpackPlugin = require('html-webpack-plugin');
+-const CopyPlugin = require('copy-webpack-plugin');
+-
+-module.exports = merge(common, {
+-  mode: 'production',
+-  plugins: [
+-    new HtmlWebpackPlugin({
+-      template: './index.html',
+-    }),
+-    new CopyPlugin({
+-      patterns: [
+-        { from: 'img', to: 'img' },
+-        { from: 'css', to: 'css' },
+-        { from: 'js/vendor', to: 'js/vendor' },
+-        { from: 'icon.svg', to: 'icon.svg' },
+-        { from: 'favicon.ico', to: 'favicon.ico' },
+-        { from: 'robots.txt', to: 'robots.txt' },
+-        { from: 'icon.png', to: 'icon.png' },
+-        { from: '404.html', to: '404.html' },
+-        { from: 'site.webmanifest', to: 'site.webmanifest' },
+-      ],
+-    }),
+-  ],
+-});
+Index: package.json
+===================================================================
+diff --git a/package.json b/package.json
+deleted file mode 100644
+--- a/package.json	(revision 00306724e97a5a62a69e25240e35a41c7718bdad)
++++ /dev/null	(revision 00306724e97a5a62a69e25240e35a41c7718bdad)
+@@ -1,24 +0,0 @@
+-{
+-  "name": " ",
+-  "version": "0.0.1",
+-  "description": "",
+-  "private": true,
+-  "keywords": [
+-    ""
+-  ],
+-  "license": "",
+-  "author": "",
+-  "scripts": {
+-    "test": "echo \"Error: no test specified\" && exit 1",
+-    "start": "webpack serve --open --config webpack.config.dev.js",
+-    "build": "webpack --config webpack.config.prod.js"
+-  },
+-  "devDependencies": {
+-    "copy-webpack-plugin": "^11.0.0",
+-    "html-webpack-plugin": "^5.6.0",
+-    "webpack": "^5.91.0",
+-    "webpack-cli": "^5.1.4",
+-    "webpack-dev-server": "^5.0.4",
+-    "webpack-merge": "^5.10.0"
+-  }
+-}
+Index: .idea/modules.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/modules.xml b/.idea/modules.xml
+new file mode 100644
+--- /dev/null	(date 1742015849982)
++++ b/.idea/modules.xml	(date 1742015849982)
+@@ -0,0 +1,8 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ProjectModuleManager">
++    <modules>
++      <module fileurl="file://$PROJECT_DIR$/.idea/buithetung2004.github.io.iml" filepath="$PROJECT_DIR$/.idea/buithetung2004.github.io.iml" />
++    </modules>
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/buithetung2004.github.io.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/buithetung2004.github.io.iml b/.idea/buithetung2004.github.io.iml
+new file mode 100644
+--- /dev/null	(date 1742015849949)
++++ b/.idea/buithetung2004.github.io.iml	(date 1742015849949)
+@@ -0,0 +1,9 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<module type="JAVA_MODULE" version="4">
++  <component name="NewModuleRootManager" inherit-compiler-output="true">
++    <exclude-output />
++    <content url="file://$MODULE_DIR$" />
++    <orderEntry type="inheritedJdk" />
++    <orderEntry type="sourceFolder" forTests="false" />
++  </component>
++</module>
+\ No newline at end of file
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+new file mode 100644
+--- /dev/null	(date 1742015849994)
++++ b/.idea/misc.xml	(date 1742015849994)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_23" default="true" project-jdk-name="openjdk-23" project-jdk-type="JavaSDK">
++    <output url="file://$PROJECT_DIR$/out" />
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/vcs.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/vcs.xml b/.idea/vcs.xml
+new file mode 100644
+--- /dev/null	(date 1742015850000)
++++ b/.idea/vcs.xml	(date 1742015850000)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="VcsDirectoryMappings">
++    <mapping directory="" vcs="Git" />
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/.gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/.gitignore b/.idea/.gitignore
+new file mode 100644
+--- /dev/null	(date 1742015850318)
++++ b/.idea/.gitignore	(date 1742015850318)
+@@ -0,0 +1,8 @@
++# Default ignored files
++/shelf/
++/workspace.xml
++# Editor-based HTTP Client requests
++/httpRequests/
++# Datasource local storage ignored files
++/dataSources/
++/dataSources.local.xml
